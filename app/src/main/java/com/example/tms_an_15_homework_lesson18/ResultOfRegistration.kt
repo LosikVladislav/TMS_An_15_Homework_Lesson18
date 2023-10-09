@@ -13,7 +13,7 @@ class ResultOfRegistration : AppCompatActivity() {
         val resultUserName = findViewById<TextView>(R.id.resultUserName)
         val resultUserData = intent.getStringExtra("username")
         if(intent != null){
-            resultUserName.text ="login: " + resultUserData
+            resultUserName.text = resultUserData
         }
 
 
@@ -21,7 +21,7 @@ class ResultOfRegistration : AppCompatActivity() {
         val resultPassword = findViewById<TextView>(R.id.resultPassword)
         val resultUserPassword = intent.getStringExtra("password")
         if(intent != null){
-            resultPassword.text ="password: " + resultUserPassword
+            resultPassword.text = resultUserPassword
         }
 
 

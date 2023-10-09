@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TMS_An_15_Homework_Lesson18</string>
+    <string name="login">Your login</string>
+    <string name="password">Your password</string>
 </resources>
