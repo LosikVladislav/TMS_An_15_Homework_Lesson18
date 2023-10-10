@@ -61,7 +61,6 @@
             android:textColor="@color/white"
             />
 
-
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
