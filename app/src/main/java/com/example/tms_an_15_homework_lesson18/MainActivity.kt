@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,11 +16,19 @@ class MainActivity : AppCompatActivity() {
         val signUp = findViewById<Button>(R.id.btn_sign_up)
 
         signUp.setOnClickListener(){
-            val intent = Intent(this, ResultOfRegistrationCorrect::class.java)
-            intent.putExtra("username", userName.text.toString())
-            intent.putExtra("password", password.text.toString())
-            if(userName.length()>6 && password.length()>6)
+            sendUserData(userName, password)
+        }
+    }
+    private fun sendUserData(userName: EditText, password: EditText) {
+        val intent = Intent(this, ResultOfRegistrationCorrect::class.java)
+        intent.putExtra(USERNAME, userName.text.toString())
+        intent.putExtra(PASSWORD, password.text.toString())
+        if(userName.length()>6 && password.length()>6){
             startActivity(intent)
         }
+    }
+    companion object {
+        const val USERNAME = "USERNAME"
+        const val PASSWORD = "PASSWORD"
     }
 }
